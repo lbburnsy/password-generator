@@ -18,9 +18,12 @@ let wantLowerCase;
 let wantNumbers;
 let wantSpecialCharacters;
 
+// Sets global variables for the characters here
 
 let characterPool = "";
 let finalPassword = "";
+
+// Takes the prompt and turns it into a boolean
 
 function returnBoolean(criteria) {
     criteria = criteria.toLowerCase();
@@ -31,6 +34,8 @@ function returnBoolean(criteria) {
     }
 }
 
+// Sets variables to the prompt boolean value
+
 function checkCriteria() {
     length = prompt("How long should the password be? (Between 8 and 128):");
     wantUpperCase = returnBoolean(prompt("Would you like to include uppercase letters? (Yes/No):"));
@@ -39,9 +44,9 @@ function checkCriteria() {
     wantSpecialCharacters = returnBoolean(prompt("Would you like to include special characters? (Yes/No):"));
 }
 
-function assembleCharacterPool() {
-    characterPool = "";
+// If we want the certain character set, it gets added to the total pool here.
 
+function assembleCharacterPool() {
     if (wantUpperCase) {
         characterPool += upperCase;
     }
@@ -61,6 +66,8 @@ function assembleCharacterPool() {
     return characterPool;
 }
 
+// Pulls random characters out of the total pool depending on desired length of password and pool length
+
 function generatePassword() {
     for (let i = 0; i < length; i++) {
         finalPassword += characterPool.charAt(Math.floor(Math.random() * characterPool.length));
@@ -68,16 +75,26 @@ function generatePassword() {
     return finalPassword;
 }
 
-function checkWorking() {
-    console.log(characterPool);
+// Resets the values so that you can repeatedly generate new passwords
+
+function resetValues() {
+    length = 0;
+    characterPool = "";
+    finalPassword = "";
 }
 
+// Main function to checck criteria and assemble passwords
+
 function writePassword() {
+    resetValues();
     checkCriteria();
     assembleCharacterPool();
     generatePassword();
-    // checkWorking();
+    console.log(finalPassword);
+    console.log(length);
     outputEl.innerHTML = finalPassword;
 }
+
+// Event listener to run the program
 
 generateButton.addEventListener('click', writePassword);
