@@ -3,12 +3,12 @@
 let generateButton = document.getElementById("generate");
 let outputEl = document.getElementById("output");
 
-// declare variables
+// declare criteria libraries
 
 let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let numbers = "123456790";
-let specialCharacters = "!@#$%^&*(_)<>?+-";
+let specialCharacters = "!#$%&'()*+,-./:;<=>?@_`{|}~";
 
 // Criteria
 
