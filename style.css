@@ -1,0 +1,17 @@
+body {
+    background-color: #cad2c5;
+}
+
+header {
+    padding: 20px;
+}
+
+main {
+    background-color: #52796f;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+#output {
+    height: 40px;
+}
