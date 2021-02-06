@@ -32,7 +32,6 @@ function returnBoolean(criteria) {
 }
 
 function checkCriteria() {
-    length = 0;
     length = prompt("How long should the password be? (Between 8 and 128):");
     wantUpperCase = returnBoolean(prompt("Would you like to include uppercase letters? (Yes/No):"));
     wantLowerCase = returnBoolean(prompt("Would you like to include lowercase letters? (Yes/No):"));
