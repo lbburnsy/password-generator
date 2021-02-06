@@ -1,6 +1,7 @@
 // Query the Document
 
 let generateButton = document.getElementById("generate");
+let clearButton = document.getElementById("clear");
 let outputEl = document.getElementById("output");
 
 // declare criteria libraries
@@ -93,6 +94,12 @@ function resetValues() {
   finalPassword = "";
 }
 
+// Clears the output div
+
+function resetOutput() {
+  outputEl.innerHTML = "";
+}
+
 // Main function to check criteria and assemble passwords
 
 function writePassword() {
@@ -106,3 +113,4 @@ function writePassword() {
 // Event listener to run the program
 
 generateButton.addEventListener("click", writePassword);
+clearButton.addEventListener("click", resetOutput);
