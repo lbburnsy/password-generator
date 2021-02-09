@@ -4,7 +4,7 @@ let generateButton = document.getElementById("generate");
 let clearButton = document.getElementById("clear");
 let outputEl = document.getElementById("output");
 
-// declare criteria libraries
+// Declare criteria libraries
 
 let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
